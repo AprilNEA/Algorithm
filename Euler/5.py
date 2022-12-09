@@ -20,14 +20,30 @@
 #     if flag:
 #         print(i)
 #         break
-def prime_list_max(n):
-    max = 2
-    for k in [3,5,7,11,13,17,19]:
-        max = k if n%k==0 else max
-    print(max)
-    return max
-res = 1
-
-for i in range(1,20+1):
-    res *=prime_list_max(i)
-print(res)
+# def prime_list(n):
+#     g = n
+#     ans = []
+#     nub_list = [19,17,13,11,7,5,3,2]
+#     while n != 1:
+#         for k in nub_list:
+#             if n%k==0:
+#                 ans.append(k)
+#                 n = int(n/k)
+#             else:
+#                 nub_list.remove(k)
+#     ans = sorted(ans,reverse=True)
+#     nub_time = 1
+#     if ans:
+#         for i in range(0,len(ans)-1):
+#             if ans[i+1] != ans[i]:
+#                 break
+#             nub_time += 1
+#         print(g,ans[0],nub_time)
+#         return ans[0],nub_time
+#     else:
+#         return 1,1
+# res = 1
+# print("from 1 to 20")
+# for j in [20,19,18,17,16,15,14,13,11]:
+#     res *= pow(*prime_list(j))
+# print(res)

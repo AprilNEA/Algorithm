@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/*
+有个细节让我一直出错
+在写for循环的时候, 个数用<号,如果大家都是坐标用<=
+*/
 int sum(int table[3][3], int r,int c) {
     
     int res = 0;
