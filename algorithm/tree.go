@@ -1,21 +1,21 @@
-package tree
+package algorithm
 
 import "container/list"
 
 // TreeNode Definition for a binary tree node.
 type TreeNode struct {
-	val   int
-	left  *TreeNode
-	right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
-func buildTree(rootList []int) *TreeNode {
+func BuildTree(rootList []int) *TreeNode {
 	if len(rootList) == 0 {
 		return nil
 	}
 
 	queue := list.New()
-	root := &TreeNode{val: rootList[0]}
+	root := &TreeNode{Val: rootList[0]}
 	queue.PushBack(root)
 
 	i := 1
@@ -23,14 +23,14 @@ func buildTree(rootList []int) *TreeNode {
 		node := queue.Remove(queue.Front()).(*TreeNode)
 
 		if i < len(rootList) && rootList[i] != -1 {
-			node.left = &TreeNode{val: rootList[i]}
-			queue.PushBack(node.left)
+			node.Left = &TreeNode{Val: rootList[i]}
+			queue.PushBack(node.Left)
 		}
 		i++
 
 		if i < len(rootList) && rootList[i] != -1 {
-			node.right = &TreeNode{val: rootList[i]}
-			queue.PushBack(node.right)
+			node.Right = &TreeNode{Val: rootList[i]}
+			queue.PushBack(node.Right)
 		}
 		i++
 	}

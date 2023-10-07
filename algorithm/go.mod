@@ -1,3 +1,3 @@
-module github.com/AprilNEA/Algorithm/algorithm
+module algorithm
 
 go 1.19
