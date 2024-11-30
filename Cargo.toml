@@ -6,7 +6,7 @@ edition = "2021"
 autobins = true
 
 [[bin]]
-name = "algorithm"  # 这是生成的可执行文件的名称
+name = "algorithm"
 path = "main.rs"
 
 [dependencies]
